@@ -26,6 +26,7 @@ source=("ftp://ftp.tvdr.de/vdr/${pkgname}-${pkgver}.tar.bz2"
         '0001-Implement-H.265-frame-parser.diff::http://www.vdr-portal.de/index.php?page=Attachment&attachmentID=39645'
         'vdr-2.2.0_camslot_streamdev_fix_crash.diff::http://schuld.org/vdr-2.2.0_camslot_streamdev_fix_crash.diff'
         'vdr-2.2.0-Fix_TS_buffer_thread_high_CPU_usage.diff::http://schuld.org/vdr-2.2.0-Fix_TS_buffer_thread_high_CPU_usage.diff'
+        'vdr-2.2.0-caid_buffer-v3.diff::http://schuld.org/vdr-2.2.0-caid_buffer-v3.diff'
         'vdr-2.1.5-naludump-0.1.diff::http://www.udo-richter.de/vdr/files/vdr-2.1.5-naludump-0.1.diff'
         'vdr-2.2.0_source_dependent_new_channel_insertion.diff::http://schuld.org/vdr-2.2.0_source_dependent_new_channel_insertion.diff'
         'vdr-2.2.0_attric_usb_fakeCount.diff::http://schuld.org/vdr-2.2.0_attric_usb_fakeCount.diff'
@@ -53,6 +54,7 @@ md5sums=('8853f64c0fc3d41ffd3b4bfc6f0a14b7'
          'b14e78c9ab99993e6b7dd56afb1290a6'
          '9405a573164083423cefdc8f7b07a347'
          '2072263a2d037050b635dc06ca4603aa'
+         'af2d5f5a72638569afbb002a5287ae50'
          '94dbf03ad78b10668c2aef129e254b98'
          'a774f6565a0aa62df40a5ce2cdfa74d8'
          'b67da6d3086deff1cb551a50161ebf0c'
@@ -86,6 +88,7 @@ prepare() {
   patch -p1 -i "$srcdir/0001-Implement-H.265-frame-parser.diff"
   patch -p1 -i "$srcdir/vdr-2.2.0_camslot_streamdev_fix_crash.diff"
   patch -p1 -i "$srcdir/vdr-2.2.0-Fix_TS_buffer_thread_high_CPU_usage.diff"
+  patch -p1 -i "$srcdir/vdr-2.2.0-caid_buffer-v3.diff"
   patch -p1 -i "$srcdir/vdr-2.1.5-naludump-0.1.diff"
   patch -p1 -i "$srcdir/vdr-2.2.0_source_dependent_new_channel_insertion.diff"
   patch -p1 -i "$srcdir/vdr-2.2.0_attric_usb_fakeCount.diff"
