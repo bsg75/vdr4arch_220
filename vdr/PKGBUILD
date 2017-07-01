@@ -27,6 +27,7 @@ source=("ftp://ftp.tvdr.de/vdr/${pkgname}-${pkgver}.tar.bz2"
         'vdr-2.2.0_camslot_streamdev_fix_crash.diff::http://schuld.org/vdr-2.2.0_camslot_streamdev_fix_crash.diff'
         'vdr-2.1.5-naludump-0.1.diff::http://www.udo-richter.de/vdr/files/vdr-2.1.5-naludump-0.1.diff'
         'vdr-2.2.0_source_dependent_new_channel_insertion.diff::http://schuld.org/vdr-2.2.0_source_dependent_new_channel_insertion.diff'
+        'vdr-2.2.0_attric_usb_fakeCount.diff::http://schuld.org/vdr-2.2.0_attric_usb_fakeCount.diff'
         '00-vdr.conf' '50-dvbsddevice.conf' '50-hello.conf' '50-pictures.conf' '50-rcu.conf'
         '60-create-dvb-device-units.rules'
         'gen-sddropin'
@@ -52,6 +53,7 @@ md5sums=('8853f64c0fc3d41ffd3b4bfc6f0a14b7'
          '9405a573164083423cefdc8f7b07a347'
          '94dbf03ad78b10668c2aef129e254b98'
          'a774f6565a0aa62df40a5ce2cdfa74d8'
+         'b67da6d3086deff1cb551a50161ebf0c'
          'de3dcdea1a4282211c6dac370019548b'
          '9cb821ebb6a25e603f9c32bafabde362'
          'fc450f75037b8712673db4969a1dd758'
@@ -83,6 +85,7 @@ prepare() {
   patch -p1 -i "$srcdir/vdr-2.2.0_camslot_streamdev_fix_crash.diff"
   patch -p1 -i "$srcdir/vdr-2.1.5-naludump-0.1.diff"
   patch -p1 -i "$srcdir/vdr-2.2.0_source_dependent_new_channel_insertion.diff"
+  patch -p1 -i "$srcdir/vdr-2.2.0_attric_usb_fakeCount.diff"
 
   sed -i '/define DEPRECATED_VIDEOSYSTEM/d' device.h
   sed -i '/define DEPRECATED_VDR_CHARSET_OVERRIDE/d' vdr.c
