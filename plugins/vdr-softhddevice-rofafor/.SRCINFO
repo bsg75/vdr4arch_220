@@ -1,0 +1,33 @@
+pkgbase = vdr-softhddevice
+	pkgdesc = software and GPU emulated HD output device plugin for VDR
+	pkgver = 9c90c5a
+	pkgrel = 1
+	epoch = 1
+	url = http://projects.vdr-developer.org/projects/plg-softhddevice
+	arch = x86_64
+	arch = i686
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	license = AGPL3
+	makedepends = git
+	makedepends = glm
+	makedepends = glu
+	makedepends = patchutils
+	depends = ffmpeg2.8
+	depends = freeglut
+	depends = glew
+	depends = mesa
+	depends = vdr-api=2.2.0
+	depends = xcb-util-wm
+	depends = xorg-server
+	optdepends = nvidia: Required for VDPAU decoding,
+	optdepends = vdr-xorg: Recommended way to start X.org server together with VDR
+	backup = etc/vdr/conf.avail/50-softhddevice.conf
+	source = git+https://github.com/rofafor/vdr-plugin-softhddevice#commit=9c90c5afbd85a113781a7d8fb10e7d68a109c698
+	source = 50-softhddevice.conf
+	md5sums = SKIP
+	md5sums = f6ef6cb0bf17c5a28f858e5306776d27
+
+pkgname = vdr-softhddevice
+
