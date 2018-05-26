@@ -20,10 +20,10 @@ conflicts=('runvdr-extreme')
 provides=("vdr-api=2.2.0")
 install='vdr.install'
 source=("ftp://ftp.tvdr.de/vdr/${pkgname}-${pkgver}.tar.bz2"
-        'MainMenuHooks-v1_0_2.diff::http://www.vdr-portal.de/index.php?page=Attachment&attachmentID=30330'
+        'MainMenuHooks-v1_0_2.diff::http://www.vdr-portal.de/index.php?attachment/30330'
         'vdr-2.2.0-frequency_signed.diff::http://www.linuxtv.org/pipermail/vdr/attachments/20170302/502a6877/attachment.bin'
 	'vdr-2.2.0-dynamite.diff::https://raw.githubusercontent.com/flensrocker/vdr-plugin-dynamite/master/patches/vdr-2.2.0-dynamite.diff'
-        '0001-Implement-H.265-frame-parser.diff::http://www.vdr-portal.de/index.php?page=Attachment&attachmentID=39645'
+        '0001-Implement-H.265-frame-parser.diff::http://www.vdr-portal.de/index.php?attachment/39645'
         'vdr-2.2.0_camslot_streamdev_fix_crash.diff::http://schuld.org/vdr-2.2.0_camslot_streamdev_fix_crash.diff'
         'vdr-2.2.0-Fix_TS_buffer_thread_high_CPU_usage.diff::http://schuld.org/vdr-2.2.0-Fix_TS_buffer_thread_high_CPU_usage.diff'
         'vdr-2.2.0-caid_buffer-v3.diff::http://schuld.org/vdr-2.2.0-caid_buffer-v3.diff'
